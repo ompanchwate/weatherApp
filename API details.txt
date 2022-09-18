@@ -1,0 +1,5 @@
+API KEY : after login into  https://openweathermap.org/
+
+API : https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+ICON : http://openweathermap.org/img/wn/10d@2x.png
