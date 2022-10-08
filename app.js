@@ -5,6 +5,14 @@ const weather = document.querySelector("#weather");
 
 //Detect Location Automatically
 //--------------------------------
+const getLocation = function(){
+    navigator?.geolocation?.getCurrentPosition(function(position){
+     const { latitude, longitude } = position.coords;
+       return {latitude, longitude}
+    },  function () {
+        throw new Error("Couldn't get location")
+    })
+}
 
 
 // Submitting the form
