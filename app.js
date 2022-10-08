@@ -5,7 +5,23 @@ const weather = document.querySelector("#weather");
 
 //Detect Location Automatically
 //--------------------------------
+navigator.geolocation.getCurrentPosition(function (position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    console.log(lat, lon);
 
+    getWeatherByLocation(lat, lon);
+});
+
+// We are fetching the URL that's why we use async (asynchronous)
+const getWeatherByLocation = async (lat, lon) => {
+    weather.innerHTML = `<h1 class="text-2xl font-bold text-white">Loading...<h1>`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    const response = await fetch(url); //JavaScript should wait for the response to be fetch that's why we use await
+    const data = await response.json();  // Fetch the data in JSON format
+    console.log(data);
+    return showWeather(data);  
+}
 
 // Submitting the form
 form.addEventListener('submit', function (event) {
