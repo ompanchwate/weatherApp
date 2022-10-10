@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class=" bg-[#3498db]  h-screen">
         <nav class="p-4 text-center font-bold text-2xl text-white bg-[#34495e] shadow-xl t-0">Weather Application</nav>
         <div class="flex flex-col justify-center items-center h-4/5">
             <div class="row  text-center m-5">
-                <form action="" id="form">
-                    <input type="search" id="search" placeholder="Search by city name" class="p-2 rounded-full shadow-lg outline-none">
+                <form action="" id="form" class="py-2 pl-8 pr-2 mb-10 sm:w-screen md:w-full sm:mx-1 bg-white rounded-full shadow-lg outline-none ">
+                    <input type="text" id="search" placeholder="Search by city name" class="outline-none active:outline-none">
+                    <button type="submit" class="px-2 py-1 bg-blue-500 rounded-full"><i class="fa-solid fa-magnifying-glass text-white"></i></button>
                 </form>
             </div>
     
@@ -23,6 +26,9 @@
         </div>
         
     </div>
+    <footer class=" overflow-hidden box-border flex items-center justify-center bg-slate-900 p-4">
+        <p class="text-gray-300 ">Site By : <a href="http://github.com/ompanchwate">Om Panchwate</a></p>
+    </footer>
 </body>
 <script src="app.js"></script>
 </html>
